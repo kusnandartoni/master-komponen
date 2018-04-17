@@ -6,10 +6,12 @@ import { MyApp } from './app.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ExpandableHeaderComponent } from '../components/expandable-header/expandable-header';
 
 @NgModule({
   declarations: [
-    MyApp
+    MyApp,
+    ExpandableHeaderComponent
   ],
   imports: [
     BrowserModule,
