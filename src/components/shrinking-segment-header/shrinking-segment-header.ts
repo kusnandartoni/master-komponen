@@ -25,7 +25,6 @@ export class ShrinkingSegmentHeaderComponent {
   }
  
   resizeHeader(ev){
-    console.log('change');
     ev.domWrite(() => {
  
       this.newHeaderHeight = this.headerHeight - ev.scrollTop;

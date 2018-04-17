@@ -22,7 +22,8 @@ export class MyApp {
       { title: 'Home', component: 'HomePage' },
       { title: 'Expandable Header', component: 'ExpandableHeaderPage' },
       { title: 'Shrink Segment Header', component: 'ShrinkingSegmentHeaderPage' },
-      { title: 'Overslide Direvtive', component: 'OverslidePage' }
+      { title: 'Overslide Direvtive', component: 'OverslidePage' },
+      { title: 'Smile Rate', component: 'SmileRatePage' }
     ];
 
   }
