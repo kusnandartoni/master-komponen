@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Overslide</ion-title>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle><ion-icon name="menu"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list no-lines>
+    <ion-item-sliding (overslide)="handleOverslide(item)" *ngFor="let item of items" #item overslide>
+      <ion-item>
+        Drag me to delete
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button>Favourite</button>
+        <button ion-button color="danger">Share</button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button>unread</button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

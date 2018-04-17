@@ -1,0 +1,40 @@
+import { Directive, Output, EventEmitter, ElementRef, Renderer } from '@angular/core';
+
+/**
+ * Generated class for the OverslideDirective directive.
+ *
+ * See https://angular.io/api/core/Directive for more info on Angular
+ * Directives.
+ */
+@Directive({
+  selector: '[overslide]', // Attribute selector
+  host:{
+    '(ionDrag)':'handleDrag($event)'
+  }
+})
+export class OverslideDirective {
+
+  @Output() overslide: any = new EventEmitter();
+
+  triggered: boolean = false;
+  
+  constructor(
+    public element: ElementRef,
+    public renderer: Renderer
+  ) {
+
+  }
+
+  handleDrag(ev){
+    if(Math.abs(ev.getSlidingPercent())>1.7 && !this.triggered){
+      this.triggered = true;
+      this.renderer.setElementStyle(this.element.nativeElement, 'transition', '0.3s linear');
+      this.renderer.setElementStyle(this.element.nativeElement, 'opacity', '0');
+
+      setTimeout(()=>{
+        this.renderer.setElementStyle(this.element.nativeElement, 'display','none');
+        this.overslide.emit(true);
+      }, 300);
+    }
+  }
+}
