@@ -25,7 +25,8 @@ export class MyApp {
       { title: 'Overslide Direvtive', component: 'OverslidePage' },
       { title: 'Smile Rate', component: 'SmileRatePage' },
       { title: 'Parallax Header', component: 'ParallaxHeaderPage' },
-      { title: 'Absolute Drag', component: 'AbsoluteDragPage' }
+      { title: 'Absolute Drag', component: 'AbsoluteDragPage' },
+      { title: 'Flash Card', component: 'FlashCardPage' }
     ];
 
   }
