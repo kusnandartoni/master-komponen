@@ -24,7 +24,8 @@ export class MyApp {
       { title: 'Shrink Segment Header', component: 'ShrinkingSegmentHeaderPage' },
       { title: 'Overslide Direvtive', component: 'OverslidePage' },
       { title: 'Smile Rate', component: 'SmileRatePage' },
-      { title: 'Parallax Header', component: 'ParallaxHeaderPage' }
+      { title: 'Parallax Header', component: 'ParallaxHeaderPage' },
+      { title: 'Absolute Drag', component: 'AbsoluteDragPage' }
     ];
 
   }

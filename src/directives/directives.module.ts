@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { OverslideDirective } from './overslide/overslide';
 import { ParallaxHeaderDirective } from './parallax-header/parallax-header';
+import { AbsoluteDragDirective } from './absolute-drag/absolute-drag';
 @NgModule({
 	declarations: [OverslideDirective,
-    ParallaxHeaderDirective],
+    ParallaxHeaderDirective,
+    AbsoluteDragDirective],
 	imports: [],
 	exports: [OverslideDirective,
-    ParallaxHeaderDirective]
+    ParallaxHeaderDirective,
+    AbsoluteDragDirective]
 })
 export class DirectivesModule {}
