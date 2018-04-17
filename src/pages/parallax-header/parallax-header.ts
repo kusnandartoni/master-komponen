@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the OverslidePage page.
+ * Generated class for the ParallaxHeaderPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,21 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-overslide',
-  templateUrl: 'overslide.html',
+  selector: 'page-parallax-header',
+  templateUrl: 'parallax-header.html',
 })
-export class OverslidePage {
+export class ParallaxHeaderPage {
 
-  items: any = new Array(10);
-  
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad OverslidePage');
+    console.log('ionViewDidLoad ParallaxHeaderPage');
   }
 
-  handleOverslide(item){
-    // console.log(item);
-  }
 }
