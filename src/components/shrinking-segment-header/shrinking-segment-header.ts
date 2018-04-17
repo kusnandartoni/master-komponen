@@ -1,20 +1,20 @@
 import { Component, Input, ElementRef, Renderer } from '@angular/core';
- 
+
 @Component({
-  selector: 'expandable-header',
-  templateUrl: 'expandable-header.html'
+  selector: 'shrinking-segment-header',
+  templateUrl: 'shrinking-segment-header.html'
 })
-export class ExpandableHeaderComponent {
+export class ShrinkingSegmentHeaderComponent {
   @Input('scrollArea') scrollArea: any;
   @Input('headerHeight') headerHeight: number;
- 
+
   newHeaderHeight: any;
- 
+  
   constructor(public element: ElementRef, public renderer: Renderer) {
- 
+  
   }
- 
-  ngOnInit(){
+
+  ngAfterViewInit(){
  
     this.renderer.setElementStyle(this.element.nativeElement, 'height', this.headerHeight + 'px');
  
@@ -25,7 +25,7 @@ export class ExpandableHeaderComponent {
   }
  
   resizeHeader(ev){
- 
+    console.log('change');
     ev.domWrite(() => {
  
       this.newHeaderHeight = this.headerHeight - ev.scrollTop;
@@ -36,22 +36,7 @@ export class ExpandableHeaderComponent {
  
       this.renderer.setElementStyle(this.element.nativeElement, 'height', this.newHeaderHeight + 'px');
  
-      for(let headerElement of this.element.nativeElement.children){
- 
-        let totalHeight = headerElement.offsetTop + headerElement.clientHeight;
- 
-        if(totalHeight > this.newHeaderHeight && !headerElement.isHidden){
-          headerElement.isHidden = true;
-          this.renderer.setElementStyle(headerElement, 'opacity', '0');
-        } else if (totalHeight <= this.newHeaderHeight && headerElement.isHidden) {
-          headerElement.isHidden = false;
-          this.renderer.setElementStyle(headerElement, 'opacity', '0.7');
-        }
- 
-      }
- 
     });
  
   }
- 
 }

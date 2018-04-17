@@ -21,6 +21,7 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: 'HomePage' },
       { title: 'Expandable Header', component: 'ExpandableHeaderPage' },
+      { title: 'Shrink Segment Header', component: 'ShrinkingSegmentHeaderPage' }
     ];
 
   }

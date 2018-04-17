@@ -1,17 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
+import { ErrorHandler, NgModule} from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { ExpandableHeaderComponent } from '../components/expandable-header/expandable-header';
 
 @NgModule({
   declarations: [
-    MyApp,
-    ExpandableHeaderComponent
+    MyApp
   ],
   imports: [
     BrowserModule,
@@ -26,5 +24,6 @@ import { ExpandableHeaderComponent } from '../components/expandable-header/expan
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
+
 })
 export class AppModule {}

@@ -1,6 +1,6 @@
 <ion-header>
  
-  <expandable-header scrollArea="mycontent" headerHeight="125">
+  <expandable-header [scrollArea]="myContent" headerHeight="125">
       <ion-item>
           <ion-label><ion-icon name="search"></ion-icon></ion-label>
           <ion-input type="text"></ion-input>
@@ -16,10 +16,13 @@
       <ion-title>
         Expandable Header
       </ion-title>
+      <ion-buttons start>
+        <button ion-button icon-only menuToggle><ion-icon name="menu"></ion-icon></button>
+      </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content fullscreen #mycontent>
+<ion-content fullscreen #myContent>
 
   <ion-card *ngFor="let test of testData">
 
