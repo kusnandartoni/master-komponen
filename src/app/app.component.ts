@@ -26,7 +26,8 @@ export class MyApp {
       { title: 'Smile Rate', component: 'SmileRatePage' },
       { title: 'Parallax Header', component: 'ParallaxHeaderPage' },
       { title: 'Absolute Drag', component: 'AbsoluteDragPage' },
-      { title: 'Flash Card', component: 'FlashCardPage' }
+      { title: 'Flash Card', component: 'FlashCardPage' },
+      { title: 'Photo Tilt', component: 'PhotoTiltPage' }
     ];
 
   }
