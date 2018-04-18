@@ -1,0 +1,40 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Standard Scrolling</ion-title>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle><ion-icon name="menu"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<!-- <ion-content>
+  <ion-list [virtualScroll]="items">
+    <ion-item *virtualItem="item">
+      <ion-avatar item-left>
+        <ion-img [src]="item.avatarUrl"></ion-img>
+      </ion-avatar>
+      <h2>{{item.title}}</h2>
+      <p>{{item.body}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content> -->
+<ion-content>
+ 
+  <ion-list [virtualScroll]="items">
+ 
+    <ion-item *virtualItem="let item">
+      <ion-avatar item-left>
+        <ion-img [src]="item.avatarUrl"></ion-img>
+      </ion-avatar>
+ 
+      <h2>{{item.title}}</h2>
+ 
+      <p>{{item.body}}</p>
+ 
+    </ion-item>
+ 
+  </ion-list>
+ 
+</ion-content>

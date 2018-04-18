@@ -27,7 +27,10 @@ export class MyApp {
       { title: 'Parallax Header', component: 'ParallaxHeaderPage' },
       { title: 'Absolute Drag', component: 'AbsoluteDragPage' },
       { title: 'Flash Card', component: 'FlashCardPage' },
-      { title: 'Photo Tilt', component: 'PhotoTiltPage' }
+      { title: 'Photo Tilt', component: 'PhotoTiltPage' },
+      { title: 'Virtual Scroll', component: 'VirtualScrollPage' },
+      { title: 'Standard Scroll', component: 'StandardScrollingPage' }
+
     ];
 
   }
