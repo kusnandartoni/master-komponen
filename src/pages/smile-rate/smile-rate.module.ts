@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { SmileRatePage } from './smile-rate';
-import { SmileRateComponent } from '../../components/smile-rate/smile-rate';
+import { SmileRateComponentModule } from '../../components/smile-rate/smile-rate.module';
 
 @NgModule({
   declarations: [
-    SmileRatePage,
-    SmileRateComponent    
+    SmileRatePage
   ],
   imports: [
+    SmileRateComponentModule,
     IonicPageModule.forChild(SmileRatePage),
   ],
   exports:[
